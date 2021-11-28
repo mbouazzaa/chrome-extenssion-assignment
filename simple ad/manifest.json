@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "simple ad",
+    "version": "1.0.0",
+    "description": "show our custom ads in the first page result",
+    "author": "Hassan",
+    "icons": {
+        "16": "/images/ads-icon.png",
+        "48": "/images/ads-icon.png",
+        "128": "/images/ads-icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "script.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "ads.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
